@@ -54,8 +54,116 @@
 
     \textbf{Apartado I. \textit{Calcula $\text{E}_{\text{dni}}(0x01234567)$ usando el modo $CBC$ e $IV = 0x0001$.}}\\
 
-
+    Tenemos por dni el número 45352581, luego obtenemos la siguiente clave:
+    $$dni \equiv 1669 \pmod(65536) \next clave=1669$$
+    y el mensaje que queremos cifrar es el número $0x01234567 = [1,1,1,0,0,1,1,0,1,0,1,0,0,0,1,0,1,1,0,0,0,1,0,0,1]$.
     
+    Vamos a calcular el criptograma usando el modo CBC y el cifrado de bloques miniAES. Vamos a dividir nuestro mensaje 
+    en dos bloques de 16 bits y así calcular $c_1$ y $c_2$ para cada uno de los bloques.
+    $$[\overbrace{1,1,1,0,0,1,1,0,1,0,1,0,0,0,1,0}^{m_1},\overbrace{1,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0}^{m_2}] $$
+
+    Además, por el enunciado tenemos que $c_0 = 0x0001$, y tenemos por tanto que $E_{\text{dni}}(0x01234567) = c_0 c_1 c_2$.
+    Tomemos por tanto nuestra clave $k = 1669 = 0x0685 = 0b11010000101$, donde podemos ver que $k_0 = 0$, $k_1 = 6$, $k_2 = 8$ 
+    y $k_3 = 5$.
+
+    Función de sustitución $\gamma$ de manera explícita: \\
+    $\gamma(0000) = 0011$ \\
+    $\gamma(0001) = 1000$ \\	
+    $\gamma(0010) = 1111$ \\
+    $\gamma(0011) = 0111$ \\
+    $\gamma(0100) = 0001$ \\
+    $\gamma(0101) = 0010$ \\
+    $\gamma(0110) = 1011$ \\
+    $\gamma(0111) = 0000$ \\
+    $\gamma(1000) = 1100$ \\
+    $\gamma(1001) = 1110$ \\
+    $\gamma(1010) = 1010$ \\
+    $\gamma(1011) = 0110$ \\
+    $\gamma(1100) = 1001$ \\
+    $\gamma(1101) = 1101$ \\
+    $\gamma(1110) = 0101$ \\
+    $\gamma(1111) = 0100$ \\
+    
+    Y obtenemos así las claves de ronda:
+    \begin{itemize}
+        \item $w_0 = k_0 = 0 = 0000$
+        \item $w_1 = k_1 = 6 = 0110$
+        \item $w_2 = k_2 = 8 = 1000$
+        \item $w_3 = k_3 = 5 = 0101$
+        \item $w_4 = w_0 \oplus \gamma(w_3) \oplus 0001 = 0000 \oplus 0010 \oplus 0001 = \alpha + 1 = 0011$
+        \item $w_5 = w_1 \oplus w_4 = \alpha^2 + \alpha + \alpha + 1 = \alpha^2 + 1 = 0110$
+        \item $w_6 = w_2 \oplus w_5 = \alpha^3 + \alpha^2 + \alpha = 1110$
+        \item $w_7 = w_3 \oplus w_6 = \alpha^2 + 1 + \alpha^3 + \alpha^2 + \alpha = \alpha^3 + \alpha + 1 = 1011$
+        \item $w_8 = w_4 \oplus \gamma(w_7) \oplus 0010 = \alpha + 1 + \alpha^2 + \alpha + \alpha = \alpha^2 + \alpha + 1 = 0111$
+        \item $w_9 = w_5 \oplus w_8 = \alpha^2 + \alpha + \alpha^2 + \alpha + 1 = 1 = 0001$
+        \item $w_{10} = w_6 \oplus w_9 = \alpha^3 + \alpha^2 + \alpha + 1 = 1111$
+        \item $w_{11} = w_7 \oplus w_{10} = \alpha^3 + \alpha + 1 + \alpha^3 + \alpha^2 + \alpha + 1 = \alpha^2 = 0100$
+    \end{itemize}
+
+    Para $c_1$ calculamos ahora $E_k(m_1 \oplus c_0) = E_k(1110011010100011)$. Para ello apliquemos cada una de las funciones de 
+    su descomposición $E_k = \sigma_{K_2} \circ \pi \circ \gamma \circ \sigma_{K_1} \circ \theta \circ \pi \circ \gamma \circ\sigma_{K_0}$.
+
+    \begin{equation*}
+        \begin{aligned}
+            &\sigma_{K_0}
+            \begin{pmatrix}
+                1110 & 1010 \\
+                0110 & 0011
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1110 & 1010 \\
+                0110 & 0011
+            \end{pmatrix} + 
+            \begin{pmatrix}
+                0000 & 1000 \\
+                0110 & 0101
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1110 & 0010 \\
+                0000 & 0110
+            \end{pmatrix} \\
+            %
+            &\gamma \begin{pmatrix}
+                1110 & 0010 \\
+                0000 & 0110
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0101 & 1111 \\
+                0011 & 1011
+            \end{pmatrix} \\
+            %
+            &\pi \begin{pmatrix}
+                0101 & 1111 \\
+                0011 & 1011
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0101 & 1111 \\
+                1011 & 0011
+            \end{pmatrix} \\
+            %
+            &\theta \begin{pmatrix}
+                0101 & 1111 \\
+                1011 & 0011
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0011 & 0010 \\
+                0010 & 0011
+            \end{pmatrix} \cdot
+            \begin{pmatrix}
+                0101 & 1111 \\
+                0011 & 1011
+            \end{pmatrix} = sin_terminar \\
+            %
+            &\sigma_{K_1}
+        \end{aligned}
+    \end{equation*}
+
+
+
+
+
+
+    \newpage
     \textbf{Apartado I. \textit{Calcula $\text{E}_{\text{dni}}(0x01234567)$ usando el modo $CFB$, $r=11$, y vector de 
             inicialización $IV = 0x0001$.}}\\
 

@@ -1,4 +1,4 @@
-En lugar de usar el bite, trabajando en binario, trabaja en exajesimal
+En lugar de usar el bite, trabajando en binario, trabaja en hexajesimal
 
 F_16 = F_2 (z^4 + z + 1)
 	
@@ -68,13 +68,13 @@ w10 = 1001 + 1010 + 0011 = 3
 
 
 
-|		|	| 6  4 |	|1010 0011|		|0110 0100|		|1100 0111|
+|		|	| 6  4 |    |1010 0011|	|0110 0100|	|1100 0111|
 |		| +	| 1  e | =  |0001 0110| + 	|0001 1110| = 	|0000 1000|
 
 
 
 gamma |1100 0111| = |1001 0000|
-	  |0000 1000|	|0011 1110|
+      |0000 1000|   |0011 1110|
 
 pi |       |	|1001 0000|
    |       | =  |1110 0011|
