@@ -229,7 +229,135 @@
         \end{aligned}
     \end{equation*}
 
-    Conseguimos finalmente que $c_1 = E_k(m_1 \oplus c_0) = 1100000010100111$
+    Conseguimos finalmente que $c_1 = E_k(m_1 \oplus c_0) = 1100000010100111$. Procedemos al encriptado de $c_2$, 
+    que sabemos que tiene la forma $c_2 = E_k(m_2 \oplus c_1) = E_k(0100010101100111 \oplus 1100000010100111) = E_k(1000010111000000)$. Procedemos 
+    por tanto aplicando la descomposición de $E_k$ como en el apartado anterior:
+
+    \begin{equation*}
+        \begin{aligned}
+            &\sigma_{K_0}
+            \begin{pmatrix}
+                1000 & 1100 \\
+                0101 & 0000
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1000 & 1100 \\
+                0101 & 0000
+            \end{pmatrix} + 
+            \begin{pmatrix}
+                0000 & 1000 \\
+                0110 & 0101
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1000 & 0100 \\
+                0011 & 0101
+            \end{pmatrix} \\
+            %
+            &\gamma \begin{pmatrix}
+                1000 & 0100 \\
+                0011 & 0101
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1100 & 0001 \\
+                0111 & 0010
+            \end{pmatrix} \\
+            %
+            &\pi \begin{pmatrix}
+                1100 & 0001 \\
+                0111 & 0010
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1100 & 0001 \\
+                0010 & 0111
+            \end{pmatrix} \\
+            %
+            &\begin{aligned} 
+                \theta 
+                \begin{pmatrix}
+                    1100 & 0001 \\
+                    0010 & 0111
+                \end{pmatrix} &=
+                \begin{pmatrix}
+                    0011 & 0010 \\
+                    0010 & 0011
+                \end{pmatrix} \cdot
+                \begin{pmatrix}
+                    1100 & 0001 \\
+                    0010 & 0111
+                \end{pmatrix} \\ &= 
+                 \begin{pmatrix}
+                    \alpha + 1 & \alpha \\
+                    \alpha & \alpha + 1
+                 \end{pmatrix} \cdot
+                    \begin{pmatrix} 
+                        \alpha^3 + \alpha^2 & 1 \\
+                        \alpha & \alpha^2 + \alpha + 1
+                    \end{pmatrix} \\ &=
+                    \begin{pmatrix}
+                        \alpha + 1 & \alpha^3 + \alpha^2 + 1 \\
+                        \alpha^3 + \alpha^2 + 1 & \alpha^3 + \alpha + 1
+                    \end{pmatrix} = 
+                    \begin{pmatrix}
+                        0011 & 1101 \\
+                        1101 & 1011
+                    \end{pmatrix}
+            \end{aligned} \\
+            %
+            &\sigma_{K_1} \begin{pmatrix}
+                0011 & 1101 \\
+                1101 & 1011
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0011 & 1101 \\
+                1101 & 1011
+            \end{pmatrix} +
+            \begin{pmatrix}
+                0011 & 1110 \\
+                0110 & 1011
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0000 & 0011 \\
+                1011 & 0000
+            \end{pmatrix} \\
+            %
+            &\gamma \begin{pmatrix}
+                0000 & 0011 \\
+                1011 & 0000
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0011 & 0111 \\
+                0110 & 0011
+            \end{pmatrix} \\
+            %
+            &\pi \begin{pmatrix}
+                0011 & 0111 \\
+                0110 & 0011
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0011 & 0111 \\
+                0011 & 0110
+            \end{pmatrix} \\
+            %
+            &\sigma_{K_2} \begin{pmatrix}
+                0011 & 0111 \\
+                0011 & 0110
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0011 & 0111 \\
+                0011 & 0110
+            \end{pmatrix} +
+            \begin{pmatrix}
+                0111 & 1111 \\
+                0001 & 0100
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0100 & 1000 \\
+                0010 & 0010
+            \end{pmatrix} \\
+            %
+        \end{aligned}
+    \end{equation*}
+
 
 
 
