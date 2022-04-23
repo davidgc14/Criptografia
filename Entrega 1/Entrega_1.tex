@@ -370,5 +370,9 @@
     \textbf{Apartado I. \textit{Calcula $\text{E}_{\text{dni}}(0x01234567)$ usando el modo $CFB$, $r=11$, y vector de 
             inicialización $IV = 0x0001$.}}\\
 
+    Tomamos nuestro mensaje $m = 0x01234567 = 1001000110100010101100111$ que tiene 25 cifras, que añadiendo ceros a la izquierda,
+    obtenemos un mensaje para dividir en bloques de 11 bits, obteniendo
+    $$\overbrace{0,0,0,0,0,0,0,0,1,0,0}^{m_1},\overbrace{1,0,0,0,1,1,0,1,0,0,0}^{m_2},\overbrace{1,0,1,0,1,1,0,0,1,1,1}^{m_3} $$
+
 
 \end{document}
