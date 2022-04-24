@@ -507,7 +507,132 @@
     Por otro lado, $lsb_{16-11}(x_1) = lsb_5(x_1) = 00001$, y por tanto obtenemos $x_2 = 0000101100110110$, a la que aplicamos de nuevo 
     la función $E_k$:
 
-    
+    \begin{equation*}
+        \begin{aligned}
+            &\sigma_{K_0}
+            \begin{pmatrix}
+                0000 & 0011 \\
+                1011 & 0110
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                0000 & 0011 \\
+                1011 & 0110
+            \end{pmatrix} + 
+            \begin{pmatrix}
+                0000 & 1000 \\
+                0110 & 0101
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                0000 & 1011 \\
+                1101 & 0011
+            \end{pmatrix} \\
+            %
+            &\gamma \begin{pmatrix}
+                0000 & 1011 \\
+                1101 & 0011
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0011 & 0110 \\
+                1101 & 0111
+            \end{pmatrix} \\
+            %
+            &\pi \begin{pmatrix}
+                0011 & 0110 \\
+                1101 & 0111
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0011 & 0110 \\
+                0111 & 1101
+            \end{pmatrix} \\
+            %
+            &\begin{aligned} 
+                \theta 
+                \begin{pmatrix}
+                    0011 & 0110 \\
+                    0111 & 1101
+                \end{pmatrix} &=
+                \begin{pmatrix}
+                    0011 & 0010 \\
+                    0010 & 0011
+                \end{pmatrix} \cdot
+                \begin{pmatrix}
+                    0011 & 0110 \\
+                    0111 & 1101
+                \end{pmatrix} \\ &= 
+                 \begin{pmatrix}
+                    \alpha + 1 & \alpha \\
+                    \alpha & \alpha + 1
+                 \end{pmatrix} \cdot
+                    \begin{pmatrix} 
+                        \alpha + 1 & \alpha^2 + \alpha \\
+                        \alpha^2 + \alpha + 1 & \alpha^3 + \alpha^2 + 1
+                    \end{pmatrix} \\ &=
+                    \begin{pmatrix}
+                        \alpha^3 + \alpha + 1 & \alpha + 1 \\
+                        \alpha^3 + \alpha^2 + \alpha + 1 & \alpha^3
+                    \end{pmatrix} = 
+                    \begin{pmatrix}
+                        1011 & 0011 \\
+                        1111 & 1000
+                    \end{pmatrix}
+            \end{aligned} \\
+            %
+            &\sigma_{K_1} \begin{pmatrix}
+                1011 & 0011 \\
+                1111 & 1000
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1011 & 0011 \\
+                1111 & 1000
+            \end{pmatrix} +
+            \begin{pmatrix}
+                0011 & 1110 \\
+                0110 & 1011
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1000 & 1101 \\
+                1001 & 0011
+            \end{pmatrix} \\
+            % 
+            &\gamma \begin{pmatrix}
+                1000 & 1101 \\
+                1001 & 0011
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1100 & 1101 \\
+                1110 & 0111
+            \end{pmatrix} \\
+            %
+            &\pi \begin{pmatrix}
+                1100 & 1101 \\
+                1110 & 0111
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1100 & 1101 \\
+                0111 & 1110
+            \end{pmatrix} \\
+            %
+            &\sigma_{K_2} \begin{pmatrix}
+                1100 & 1101 \\
+                0111 & 1110
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1100 & 1101 \\
+                0111 & 1110
+            \end{pmatrix} +
+            \begin{pmatrix}
+                0111 & 1111 \\
+                0001 & 0100
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1011 & 0010 \\
+                0110 & 1010
+            \end{pmatrix} \\
+            %
+        \end{aligned}
+    \end{equation*}
+
+
 
 
 
