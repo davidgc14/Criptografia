@@ -374,5 +374,144 @@
     obtenemos un mensaje para dividir en bloques de 11 bits, obteniendo
     $$\overbrace{0,0,0,0,0,0,0,0,1,0,0}^{m_1},\overbrace{1,0,0,0,1,1,0,1,0,0,0}^{m_2},\overbrace{1,0,1,0,1,1,0,0,1,1,1}^{m_3} $$
 
+    Procedemos a continuación a encriptar el mensaje $x_1 = 0000000000000001$ mediante la función $E_k$ descrita en el apartado anterior:
+
+    \begin{equation*}
+        \begin{aligned}
+            &\sigma_{K_0}
+            \begin{pmatrix}
+                0000 & 0000 \\
+                0000 & 0001
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                0000 & 0000 \\
+                0000 & 0001
+            \end{pmatrix} + 
+            \begin{pmatrix}
+                0000 & 1000 \\
+                0110 & 0101
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                0000 & 1000 \\
+                0110 & 0100
+            \end{pmatrix} \\
+            %
+            &\gamma \begin{pmatrix}
+                0000 & 1000 \\
+                0110 & 0100
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0011 & 1100 \\
+                1011 & 0001
+            \end{pmatrix} \\
+            %
+            &\pi \begin{pmatrix}
+                0011 & 1100 \\
+                1011 & 0001
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0011 & 1100 \\
+                0001 & 1011
+            \end{pmatrix} \\
+            %
+            &\begin{aligned} 
+                \theta 
+                \begin{pmatrix}
+                    0011 & 1100 \\
+                    0001 & 1011
+                \end{pmatrix} &=
+                \begin{pmatrix}
+                    0011 & 0010 \\
+                    0010 & 0011
+                \end{pmatrix} \cdot
+                \begin{pmatrix}
+                    0011 & 1100 \\
+                    0001 & 1011
+                \end{pmatrix} \\ &= 
+                 \begin{pmatrix}
+                    \alpha + 1 & \alpha \\
+                    \alpha & \alpha + 1
+                 \end{pmatrix} \cdot
+                    \begin{pmatrix} 
+                        \alpha + 1 & \alpha^3 + \alpha^2 \\
+                        1 & \alpha^3 + \alpha + 1
+                    \end{pmatrix} \\ &=
+                    \begin{pmatrix}
+                        \alpha^2 + \alpha + 1 & \alpha \\
+                        \alpha^2 + 1 & \alpha^2 + 1
+                    \end{pmatrix} = 
+                    \begin{pmatrix}
+                        0111 & 0010 \\
+                        0101 & 0101
+                    \end{pmatrix}
+            \end{aligned} \\
+            %
+            &\sigma_{K_1} \begin{pmatrix}
+                0111 & 0010 \\
+                0101 & 0101
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0111 & 0010 \\
+                0101 & 0101
+            \end{pmatrix} +
+            \begin{pmatrix}
+                0011 & 1110 \\
+                0110 & 1011
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0100 & 1100 \\
+                0011 & 1110
+            \end{pmatrix} \\
+            %
+            &\gamma \begin{pmatrix}
+                0100 & 1100 \\
+                0011 & 1110
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0001 & 1001 \\
+                0111 & 0101
+            \end{pmatrix} \\
+            %
+            &\pi \begin{pmatrix}
+                0001 & 1001 \\
+                0111 & 0101
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0001 & 1001 \\
+                0101 & 0111
+            \end{pmatrix} \\
+            %
+            &\sigma_{K_2} \begin{pmatrix}
+                0001 & 1001 \\
+                0101 & 0111
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0001 & 1001 \\
+                0101 & 0111
+            \end{pmatrix} +
+            \begin{pmatrix}
+                0111 & 1111 \\
+                0001 & 0100
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0110 & 0110 \\
+                0100 & 0011
+            \end{pmatrix} \\
+            %
+        \end{aligned}
+    \end{equation*}
+
+    Tenemos por tanto que $E_k(x_1) = 0110011001000011$, y así obtenemos que $msb_{11}(E_k(x_1)) = 01100110010$. Por tanto, 
+    $c_1 = m_1 \oplus msb_{11}(E_k(x_1)) = 00000000100 \oplus 01100110010 = 01100110110$.
+
+    Por otro lado, $lsb_{16-11}(x_1) = lsb_5(x_1) = 00001$, y por tanto obtenemos $x_2 = 0000101100110110$, a la que aplicamos de nuevo 
+    la función $E_k$:
+
+    
+
+
+
+
+
 
 \end{document}
