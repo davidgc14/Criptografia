@@ -366,6 +366,12 @@
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
     \newpage
     \textbf{Apartado I. \textit{Calcula $\text{E}_{\text{dni}}(0x01234567)$ usando el modo $CFB$, $r=11$, y vector de 
             inicialización $IV = 0x0001$.}}\\
@@ -632,11 +638,141 @@
         \end{aligned}
     \end{equation*}
 
+    Tenemos por tanto que $E_k(x_2) = 1011001001101010$, y así obtenemos que $msb_{11}(E_k(x_2)) = 10110010011$. Por tanto,
+    $c_2 = m_2 \oplus msb_{11}(E_k(x_2)) = 10001101000 \oplus 10110010011 = 00111111011$.
 
+    Por otro lado, $lsb_5(x_2) = 00100$, y por tanto obtenemos $x_3 = 0010000111111011$, a la que aplicamos de nuevo
+    la función $E_k$:
 
+    \begin{equation*}
+        \begin{aligned}
+            &\sigma_{K_0}
+            \begin{pmatrix}
+                0010 & 1111 \\
+                0001 & 1011
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                0010 & 1111 \\
+                0001 & 1011
+            \end{pmatrix} + 
+            \begin{pmatrix}
+                0000 & 1000 \\
+                0110 & 0101
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                0010 & 0111 \\
+                0111 & 1110
+            \end{pmatrix} \\
+            %
+            &\gamma \begin{pmatrix}
+                0010 & 0111 \\
+                0111 & 1110
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1111 & 0000 \\
+                0000 & 0101
+            \end{pmatrix} \\
+            %
+            &\pi \begin{pmatrix}
+                1111 & 0000 \\
+                0000 & 0101
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1111 & 0000 \\
+                0101 & 0000
+            \end{pmatrix} \\
+            %
+            &\begin{aligned} 
+                \theta 
+                \begin{pmatrix}
+                    1111 & 0000 \\
+                    0101 & 0000
+                \end{pmatrix} &=
+                \begin{pmatrix}
+                    0011 & 0010 \\
+                    0010 & 0011
+                \end{pmatrix} \cdot
+                \begin{pmatrix}
+                    1111 & 0000 \\
+                    0101 & 0000
+                \end{pmatrix} \\ &= 
+                 \begin{pmatrix}
+                    \alpha + 1 & \alpha \\
+                    \alpha & \alpha + 1
+                 \end{pmatrix} \cdot
+                    \begin{pmatrix} 
+                        \alpha^3 + \alpha^2 + \alpha + 1 & 0 \\
+                        \alpha^2 + 1 & 0
+                    \end{pmatrix} \\ &=
+                    \begin{pmatrix}
+                        \alpha^3 & 0 \\
+                        \alpha   & 0
+                    \end{pmatrix} = 
+                    \begin{pmatrix}
+                        1000 & 0000 \\
+                        0010 & 0000
+                    \end{pmatrix}
+            \end{aligned} \\
+            %
+            &\sigma_{K_1} \begin{pmatrix}
+                1000 & 0000 \\
+                0010 & 0000
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1000 & 0000 \\
+                0010 & 0000
+            \end{pmatrix} +
+            \begin{pmatrix}
+                0011 & 1110 \\
+                0110 & 1011
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1011 & 1110 \\
+                0100 & 1011
+            \end{pmatrix} \\
+            % 
+            &\gamma \begin{pmatrix}
+                1011 & 1110 \\
+                0100 & 1011
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0110 & 0101 \\
+                0001 & 0110
+            \end{pmatrix} \\
+            %
+            &\pi \begin{pmatrix}
+                0110 & 0101 \\
+                0001 & 0110
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0110 & 0101 \\
+                0110 & 0001
+            \end{pmatrix} \\
+            %
+            &\sigma_{K_2} \begin{pmatrix}
+                0110 & 0101 \\
+                0110 & 0001
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0110 & 0101 \\
+                0110 & 0001
+            \end{pmatrix} +
+            \begin{pmatrix}
+                0111 & 1111 \\
+                0001 & 0100
+            \end{pmatrix} =
+            \begin{pmatrix}
+                0001 & 1010 \\
+                0111 & 0101
+            \end{pmatrix} \\
+            %
+        \end{aligned}
+    \end{equation*}
 
+    Tenemos por tanto que $E_k(x_3) = 0001101001110101$, y así obtenemos que $msb_{11}(E_k(x_3)) = 00011010011$. Por tanto,
+    $c_3 = m_3 \oplus msb_{11}(E_k(x_3)) = 10101100111 \oplus 00011010011 = 10110110100$.
 
-
-
+    Obtenemos finalmente que $E_k(0x01234567) = c$, con 
+    $$c = c_1 \cdot c_2 \cdot c_3 = 011001101100011111101110110110100$$
 
 \end{document}
