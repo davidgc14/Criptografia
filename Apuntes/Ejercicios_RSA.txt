@@ -1,0 +1,92 @@
+Ejercicio 3.1
+
+Clave pública (2291,17)
+
+	3.1.1 phi(n)=2184
+	
+		(x-p)(x-q) 	= x² - (p+q)x + pq = 
+				= x² - (n - phi(n) + 1)x + n =
+				= x² - 108x + 2291
+			
+			=>	x = 54 +- sqrt(54² - 2291)
+			
+			=>	x1 = 79	
+				x2 = 29 
+
+			=>	2291 = 79.29
+	
+	
+	3.1.2 
+	
+		dividendo	divisor	cociente	resto		coef d
+		2184		17		128		8		-128
+		17		8		2		1		257
+		
+		Se ha obtenido multiplicando y restando por el vector (0 1)
+	
+	
+	3.1.3 d=257
+		
+		k = e.d - 1 = 4368		(257.17 = 4369)
+		
+		
+	3.1.4 RSA(1116)
+	
+		a²¹⁸⁴ mod 2291,	a = 2, 3, 5, 7, ...	(2184 = k/2)
+		
+		Pasamos a binario	2184 = 0b100010001000
+		
+		a²¹⁸⁴ mod 2291 = 1 	para a = 2, 3, 5
+		
+		Actualizamos nuestro exponente, k'/2 = 1092
+		
+		a¹⁰⁹² mod 2291 = 1 	para a = 2, 3, 5 
+		
+		Actualizamos nuestro exponente, k'/2 = 546
+
+		a⁵⁴⁶ mod 2291 = 1739 	para a = 2
+			
+			Hemos encontrado un modulo distinto de 1, luego
+			mcd(2291,1739-1) = 79
+			
+			Ya tenemos una factorización. Aplicamos RSA
+			
+			RSA(n,e)(1116)	= 1116¹⁷ mod 2291
+					= 678    mod 2291
+					
+			=>	678²⁵⁷ mod 2291 = 1116
+			
+			Forma auxiliar de cálculo:
+			Dividimos 678 entre 79 y 29, y también 257 entre 78 y 28
+			Tomando los restos y los cocientes tenemos que resolver
+			la congruencia que le sigue
+				8²³ mod 79 = 52
+				11⁵ mod 29 = 14	=>	x = 52 mod 79
+								x = 14 mod 29
+		
+		
+
+
+Ejercicio 3.2
+
+	Divisores de n > sqrt(n) 	n = s² - t²
+	
+	n= p.q
+	
+	|p + q|²  |p - q|²	p² + 2.p.q + q²   p² - 2.p.q + q²
+	|-----| - |-----| = 	 -------------  -  ------------ 	= p.q
+	|  2  |   |  2  |		4		 4
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		 
+	
