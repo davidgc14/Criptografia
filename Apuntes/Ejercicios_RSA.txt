@@ -69,7 +69,7 @@ Clave pública (2291,17)
 
 Ejercicio 3.2
 
-	Divisores de n > sqrt(n) 	n = s² - t²
+	Divisores de n > sqrt(n) 	n = s² - t²,	s > t > 0
 	
 	n= p.q
 	
@@ -78,6 +78,9 @@ Ejercicio 3.2
 	|  2  |   |  2  |		4		 4
 	
 	
+		n = s² - t² = (s+t)(s-t)		p = s + t
+		s + t > sqrt(n)			q = s - t
+		s + t > s - t
 		
 		
 		
