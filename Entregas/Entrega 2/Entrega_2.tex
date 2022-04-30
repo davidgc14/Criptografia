@@ -49,10 +49,25 @@
 
     \vspace{1cm}
 
-    Consideremos el cifrado por bloques miniAES descrito en el ejercicio 2.1.
+    Partimos de nuestro dni$= 45352581$. Dividimos dicho número en dos bloques, 4535 y 2581. Sean $p = 4547$ y $q = 2591$ los 
+    primeros primos mayores o iguales que los bloques anteriores. Sea $n = pq = 11781277$ y $e$ el menor primo mayor o igual que
+    11 que es primo relativo con $\varphi(n)$. Sea $d = e^{-1} \pmod{\varphi(n)}$.
 
+    Tenemos así $\varphi(n) = 11774140$, $e = 11$ y $d = $
 
-    \textbf{Apartado I. \textit{Calcula $\text{E}_{\text{dni}}(0x01234567)$ usando el modo $CBC$ e $IV = 0x0001$.}}\\
+    \textbf{Apartado I. \textit{Cifra el mensaje $m = 0xCAFE$.}}\\
+
+    \newpage
+    \textbf{Apartado II. \textit{Descifra el criptograma anterior.}}\\
+
+    \newpage
+    \textbf{Apartado III. \textit{Intenta factorizar $n$ mediante el método $P-1$ de Polard. Para ello llega, como máximo a $b=8$.}}\\
+
+    \newpage
+    \textbf{Apartado IV. \textit{Intenta factorizar $n$ a partir de $\varphi(n)$.}}\\
+
+    \newpage
+    \textbf{Apartado V. \textit{Intenta factorizar $n$ a partir de $e$ y $d$.}}\\ 
 
 
 \end{document}

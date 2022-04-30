@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1651336973 "/home/curbelo/Documentos/Criptografia/Entregas/Entrega 2/Entrega_2.tex" "/home/curbelo/Documentos/Criptografia/Entregas/Entrega 2/Entrega_2.pdf" "Entrega_2" 1651336973
+["pdflatex"] 1651340570 "/home/curbelo/Documentos/Criptografia/Entregas/Entrega 2/Entrega_2.tex" "/home/curbelo/Documentos/Criptografia/Entregas/Entrega 2/Entrega_2.pdf" "Entrega_2" 1651340571
   "/etc/texmf/web2c/texmf.cnf" 1645912500 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/curbelo/Documentos/Criptografia/Entregas/Entrega 2/Entrega_2.aux" 1651336973 135 b5926ae10a320b58c88c0b3b00395ec4 ""
-  "/home/curbelo/Documentos/Criptografia/Entregas/Entrega 2/Entrega_2.tex" 1651336961 1160 f1ae1e962bc99710cc580ee161898c4f ""
+  "/home/curbelo/Documentos/Criptografia/Entregas/Entrega 2/Entrega_2.aux" 1651340570 135 5dea451a1a54b612c96d247a9c5a7eaf ""
+  "/home/curbelo/Documentos/Criptografia/Entregas/Entrega 2/Entrega_2.tex" 1651340570 1864 04e84c5e7eaac4ada2718d6151e59adf ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -23,6 +23,9 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def" 1581719732 87344 ec128793fb5196bbcc1741e5366ddac1 ""
   "/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty" 1581719732 18844 909add1631725af40d27125357ea816e ""
@@ -180,11 +183,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1645912741 4770781 1ed1abab22da9c3e2cc82e4db562318b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1645912789 8259919 a793c1f5b9ddcd613a0c518ee5a02865 ""
-  "Entrega_2.aux" 1651336973 135 b5926ae10a320b58c88c0b3b00395ec4 "pdflatex"
-  "Entrega_2.tex" 1651336961 1160 f1ae1e962bc99710cc580ee161898c4f ""
+  "Entrega_2.aux" 1651340570 135 5dea451a1a54b612c96d247a9c5a7eaf "pdflatex"
+  "Entrega_2.tex" 1651340570 1864 04e84c5e7eaac4ada2718d6151e59adf ""
   (generated)
-  "Entrega_2.pdf"
-  "Entrega_2.aux"
-  "Entrega_2.log"
   "/home/curbelo/Documentos/Criptografia/Entregas/Entrega 2/Entrega_2.pdf"
   "/home/curbelo/Documentos/Criptografia/Entregas/Entrega 2/Entrega_2.log"
+  "Entrega_2.aux"
+  "Entrega_2.log"
+  "Entrega_2.pdf"
