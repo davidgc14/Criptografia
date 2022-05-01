@@ -92,12 +92,71 @@
 
     En este caso no ha sido posible factorizar $n$ en 8 pasos.
 
-    
+
     \newpage
     \textbf{Apartado IV. \textit{Intenta factorizar $n$ a partir de $\varphi(n)$.}}\\
+    Hayar una factorización en nuestro caso consiste en obtener $p$ y $q$ (ya que $n = pq$). Para ello, tenemos la siguiente ecuación:
+    $$(x-p)(x-q) = x^2 - (n + 1 - \varphi(n)) \cdot x - n$$
+
+    Tratemos de resolverla. Sabemos que $p$ y $q$ son las soluciones de $b \pm \sqrt{b^2 -n}$, donde
+    sabemos que $p + q = 2b = n - \varphi(n) + 1 = 7138$, luego obtenemos que $b = 3569$. Ahora resolviendo tenemos
+    $$b \pm \sqrt{b^2 -n} = 3569 \pm \sqrt{956484} = 3569 \pm 978 \next p = 4547, \quad q = 2591$$
 
     \newpage
     \textbf{Apartado V. \textit{Intenta factorizar $n$ a partir de $e$ y $d$.}}\\ 
+    Partimos de $n = 11781277$, $e = 11$ y $d = 8563011$. Tratemos de factorizar $n$. Para ello calculemos previamente 
+    $k = e \cdot d - 1 = 94193120$ y por tanto $k/2 = 47096560$. Calculamos ahora
+    $a^{k/2^i} \pmod{n}$ para $i = 1, 2, 3, 4, 5$ y $a = 2, 3, 5, 7, 11$.
+    \begin{equation*}k/2: \left\{\\
+        \begin{aligned}
+            &2^{47096560} \pmod{11781277} = 1 \\
+            &3^{47096560} \pmod{11781277} = 1 \\
+            &5^{47096560} \pmod{11781277} = 1 \\
+            &7^{47096560} \pmod{11781277} = 1 \\
+            &11^{47096560} \pmod{11781277} = 1 \\
+        \end{aligned} \right.
+    \end{equation*}
+    \begin{equation*}
+        k/4: \left\{ \\
+        \begin{aligned}
+            &2^{23548280} \pmod{11781277} = 1 \\
+            &3^{23548280} \pmod{11781277} = 1 \\
+            &5^{23548280} \pmod{11781277} = 1 \\
+            &7^{23548280} \pmod{11781277} = 1 \\
+            &11^{23548280} \pmod{11781277} = 1 \\
+        \end{aligned} \right.
+    \end{equation*}
+    \begin{equation*}
+        k/8: \left\{ \\
+        \begin{aligned}
+            &2^{11774140} \pmod{11781277} = 1 \\
+            &3^{11774140} \pmod{11781277} = 1 \\
+            &5^{11774140} \pmod{11781277} = 1 \\
+            &7^{11774140} \pmod{11781277} = 1 \\
+            &11^{11774140} \pmod{11781277} = 1 \\
+        \end{aligned} \right. 
+    \end{equation*}
+    \begin{equation*}
+        k/16: \left\{ \\
+        \begin{aligned}
+            &2^{5887070} \pmod{11781277} = 1 \\
+            &3^{5887070} \pmod{11781277} = 1 \\
+            &5^{5887070} \pmod{11781277} = 1 \\
+            &7^{5887070} \pmod{11781277} = 1 \\
+            &11^{5887070} \pmod{11781277} = 1 \\
+        \end{aligned} \right.
+    \end{equation*}
+    \begin{equation*}
+        k/32: \left\{ \\
+        \begin{aligned}
+            &2^{2943535} \pmod{11781277} = 2541772 \\
+        \end{aligned} \right.
+    \end{equation*}
 
+    Hemos obtenido que $2^{k/32} \pmod{n} = 2541772 \neq 1$, por tanto obtenemos la factorización como sigue:
+    \begin{equation*}
+        p = \text{mcd} (n, 2541772 + 1) = 4547 \\
+        q = \text{mcd} (n, 2541772 - 1) = 2591 
+    \end{equation*}
 
 \end{document}
