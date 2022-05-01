@@ -77,7 +77,22 @@
 
     \newpage
     \textbf{Apartado III. \textit{Intenta factorizar $n$ mediante el método $P-1$ de Polard. Para ello llega, como máximo a $b=8$.}}\\
+    Tratemos de factorizar $n$ en 8 pasos como máximo. Para ello, vamos a utilizar el método $P-1$ de Polard. Usaremos como base el 2, 
+    que sabemos que es primo relativo con $n$. Comencemos con las iteraciones.
+    \begin{enumerate}
+        \item[$b=1$] $$2^{1!} \equiv 2 \pmod{n}, \quad \text{con }\text{ mcd}(2-1,n) = 1$$
+        \item[$b=2$] $$2^{2!} \equiv 4 \pmod{n}, \quad \text{con }\text{ mcd}(4-1,n) = 1$$
+        \item[$b=3$] $$2^{3!} \equiv 64 \pmod{n}, \quad \text{con }\text{ mcd}(64-1,n) = 1$$
+        \item[$b=4$] $$2^{4!} \equiv 4995939 \pmod{n}, \quad \text{con }\text{ mcd}(4995939-1,n) = 1$$
+        \item[$b=5$] $$2^{5!} \equiv 3564251 \pmod{n}, \quad \text{con }\text{ mcd}(3564251-1,n) = 1$$
+        \item[$b=6$] $$2^{6!} \equiv 1811135 \pmod{n}, \quad \text{con }\text{ mcd}(1811135-1,n) = 1$$
+        \item[$b=7$] $$2^{7!} \equiv 9030003 \pmod{n}, \quad \text{con }\text{ mcd}(9030003-1,n) = 1$$
+        \item[$b=8$] $$2^{8!} \equiv 9730811 \pmod{n}, \quad \text{con }\text{ mcd}(9730811-1,n) = 1$$
+    \end{enumerate}
 
+    En este caso no ha sido posible factorizar $n$ en 8 pasos.
+
+    
     \newpage
     \textbf{Apartado IV. \textit{Intenta factorizar $n$ a partir de $\varphi(n)$.}}\\
 
