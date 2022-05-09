@@ -1,7 +1,7 @@
 #MiniAESpagina19tema2
 
 # importar librerias de matematicas entera
-from math import *
+# from math import *
 
 
 
