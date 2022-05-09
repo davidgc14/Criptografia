@@ -1,0 +1,26 @@
+Ejercicio 4.3
+
+	(p, q, g, y)
+	
+	Veamos que t = s⁻¹ = b.r⁻¹ (mod q)
+	Además que r = ((g^m.y^r)^t mod p) mod q
+	
+		((g^m.y^r)^t mod p) mod q = 
+		((g^(arb⁻¹).y^r)^(br⁻¹) mod p) mod q = 
+		(g^a . y^b mod p) mod q = 
+		(r mod p) mod q 
+		
+	Luego tenemos que es una firma válida
+	
+
+
+Ejercicio 4.4
+
+	Z_n = <g>	(g,n) = 1
+	
+	h in Z_n	h = a.y mod n
+	
+	No se puede usar puesto que el cálculo del logaritmo discreto
+	se hace de forma eficiente.
+	
+
