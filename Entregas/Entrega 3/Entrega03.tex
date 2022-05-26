@@ -112,9 +112,9 @@
         \large{\textbf{Silver - Pohlig - Hellman}}  
     \end{center}
 
-    Consideremos de nuevo $p = 211$, $h = 109$ y $g = 3$ el generador del grupo $\F_{211}^*$. Para conocer el número de 
-    iteraciones necesarias, factorizamos $p - 1 = 210 = 2 \cdot 3 \cdot 5 \cdot 7$, lo que nos informa que el algoritmo
-    necesita de 4 iteraciones.
+    Consideremos de nuevo $p = 211$, $h = 109$ y $g = 3$ el generador del grupo $\F_{211}^*$. Procedemos al cálculo del 
+    logaritmo $\alpha = \log_3 109 \pmod{211}$. Para conocer el número de iteraciones necesarias, factorizamos 
+    $p - 1 = 210 = 2 \cdot 3 \cdot 5 \cdot 7$, lo que nos informa que el algoritmo necesita de 4 iteraciones.
 
     \begin{enumerate}
         \item $ p_1 = 2, e_1 = 1 \next p_1^{e_1} = 2 \\
@@ -123,7 +123,45 @@
                 y_0 = h = 109 \\
                 109^{210/2} = 1 \pmod{211} \next x_0 = 0 \\
                 m = 0 \pmod{2} $
-        \item
+        \item $ p_2 = 3, e_2 = 1 \next p_2^{e_2} = 3 \\
+                r_1 = 3^{(1 \cdot 210)/3} \pmod{211} = 196 \\
+                r_2 = 3^{(2 \cdot 210)/3} \pmod{211} = 14 \\
+                y_0 = h = 109 \\
+                109^{210/3} = 1 \pmod{211} \next x_0 = 0 \\
+                m = 0 \pmod{3} $
+        \item $ p_3 = 5, e_3 = 1 \next p_3^{e_3} = 5 \\
+                r_0 = 1 \\
+                r_1 = 3^{(1 \cdot 210)/5} \pmod{211} = 188 \\
+                r_2 = 3^{(2 \cdot 210)/5} \pmod{211} = 107 \\
+                r_3 = 3^{(3 \cdot 210)/5} \pmod{211} = 71 \\
+                r_4 = 3^{(4 \cdot 210)/5} \pmod{211} = 55 \\
+                y_0 = h = 109 \\
+                109^{210/5} = 188 \pmod{211} = r_1 \next x_0 = 1 \\
+                m = 1 \pmod{5} $
+        \item $ p_4 = 7, e_4 = 1 \next p_4^{e_4} = 7 \\
+                r_0 = 1 \\
+                r_1 = 3^{(1 \cdot 210)/7} \pmod{211} = 171 \\
+                r_2 = 3^{(2 \cdot 210)/7} \pmod{211} = 123 \\
+                r_3 = 3^{(3 \cdot 210)/7} \pmod{211} = 144 \\
+                r_4 = 3^{(4 \cdot 210)/7} \pmod{211} = 148 \\
+                r_5 = 3^{(5 \cdot 210)/7} \pmod{211} = 199 \\
+                r_6 = 3^{(6 \cdot 210)/7} \pmod{211} = 58 \\
+                y_0 = h = 109 \\
+                109^{210/7} = 199 \pmod{211} = r_5 \next x_0 = 5 \\
+                m = 5 \pmod{7} $
     \end{enumerate}
+
+    Una vez finalizadas las iteraciones, obtenemos el siguiente sistemas de ecuaciones en congruencia:
+    $$\left\{ \begin{aligned}
+        m = 0 \pmod{2} \\
+        m = 0 \pmod{3} \\
+        m = 1 \pmod{5} \\
+        m = 5 \pmod{7}
+    \end{aligned}\right.
+    $$
+
+    El cual tiene como solución $m = 96$, con lo que tenemos que $\alpha = \log_3 109 \pmod{211} = 96$.
+    Como podemos comprobar, hemos obtenido la misma solución que en el primer algoritmo, luego el mensaje
+    obtenido del criptograma $(154, 30)$ es $m = 44$.
 
 \end{document}
