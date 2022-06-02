@@ -50,13 +50,24 @@
 
     \vspace{1cm}     
 
-    \textit{Los parámetros de un criptosistema de ElGamal son $p = 211$ y 
-    $g = 3$, es decir, el criptosistema está diseñado en el cuerpo $\F_{211} = \Z_{211}$ y tomamos
-    como generador de $\F_{211}^*$, $g = 3$. La clave pública empleada es $3^a = 109 \pmod{211}$.
-    Descifra el criptograma $(154, \text{dni} \pmod{211})$, donde dni es el número de tu DNI. Para 
-    calcular los logaritmos discretos necesarios emplea dos de los métodos descritos en la teoría.} 
+    \textit{Sea $\F_{32} = \F_2 [\xi]_{\xi^5 + \xi^2 + 1}$. Cada uno de vosotros, de acuerdo a su número de $DNI = 45352581$ o similar,
+            dispone de una curva elíptica sobre $\F_{32}$ con una raíz $x$ y un punto base dados en el Cuadro 6.1.}
 
     \vspace{0.5cm}   
+
+    \textbf{Ejercicio 1. }\textit{Calcula, mediante el algoritmo de Shank o mediante el Algoritmo 9, $\log_Q \mathcal{O}$.}
+
+    \vspace{0.5cm}
+
+    \textbf{Ejercicio 2. }\textit{Para tu curva y tu punto base, genera un par de claves pública/privada para el protocolo ECDH.}
+
+    \vspace{0.5cm}
+
+    \textbf{Ejercicio 3. }\textit{Cifra el mensaje $(\xi^3 + \xi^2 + 1, \xi^4 + \xi^2)$ mediante el criptosistema de Menezes-Vanstone.}
+
+    \vspace{0.5cm}
+
+    \textbf{Ejercicio 4. }\textit{Descifra el mensaje anterior.}
 
 
 
