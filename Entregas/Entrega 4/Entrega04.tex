@@ -56,17 +56,63 @@
     \vspace{0.5cm}   
 
     \textbf{Ejercicio 1. }\textit{Calcula, mediante el algoritmo de Shank o mediante el Algoritmo 9, $\log_Q \mathcal{O}$.}
-
     \vspace{0.5cm}
 
+    Teniendo el $DNI = 45352581$, tenemos que $DNI \equiv 5 \pmod{32}$, y por tanto, de acuerdo con el Cuadro 6.1, obtenemos 
+    $E = E(\xi^2 + 1, \xi^4 + \xi^3 + \xi + 1)$ y  el punto $Q = (\xi^3 + \xi^2 + \xi, \xi + 1)$. Procedemos al cáclulo del logaritmo 
+    $\log_Q \mathcal{O}$ mediante el algoritmo de Shank, por lo que para ello procedemos primeramente al cálculo de las potencias de
+    $\xi$ en base $\xi^5 + \xi^2 + 1$.
+
+    \begin{center}
+        \begin{tabular}{r l}
+            $\xi^0$    = & $1$ \\
+            $\xi^1$    = & $\xi$ \\
+            $\xi^2$    = & $\xi^2$ \\
+            $\xi^3$    = & $\xi^3$ \\
+            $\xi^4$    = & $\xi^4$ \\
+            $\xi^5$    = & $\xi^2 + 1$ \\
+            $\xi^6$    = & $\xi^3 + \xi$ \\
+            $\xi^7$    = & $\xi^4 + \xi^2$ \\
+            $\xi^8$    = & $\xi^3 + \xi^2 + 1$ \\
+            $\xi^9$    = & $\xi^4 + \xi^3 + \xi$ \\
+            $\xi^{10}$ = & $\xi^4 + 1$ \\
+            $\xi^{11}$ = & $\xi^2 + \xi + 1$ \\
+            $\xi^{12}$ = & $\xi^3 + \xi^2 + \xi$ \\
+            $\xi^{13}$ = & $\xi^4 + \xi^3 + \xi^2$ \\
+            $\xi^{14}$ = & $\xi^4 + \xi^3 + \xi^2 + 1$ \\
+            $\xi^{15}$ = & $\xi^4 + \xi^3 + \xi^2 + \xi + 1$ \\
+            $\xi^{16}$ = & $\xi^4 + \xi^3 + \xi + 1$ \\
+            $\xi^{17}$ = & $\xi^4 + \xi + 1$ \\
+            $\xi^{18}$ = & $\xi + 1$ \\
+            $\xi^{19}$ = & $\xi^2 + \xi$ \\
+            $\xi^{20}$ = & $\xi^3 + \xi^2$ \\
+            $\xi^{21}$ = & $\xi^4 + \xi^3$ \\
+            $\xi^{22}$ = & $\xi^4 + \xi^2 + 1$ \\
+            $\xi^{23}$ = & $\xi^3 + \xi^2 + \xi + 1$ \\
+            $\xi^{24}$ = & $\xi^4 + \xi^3 + \xi^2 + \xi$ \\
+            $\xi^{25}$ = & $\xi^4 + \xi^3 + 1$ \\
+            $\xi^{26}$ = & $\xi^4 + \xi^2 + \xi + 1$ \\
+            $\xi^{27}$ = & $\xi^3 + \xi + 1$ \\
+            $\xi^{28}$ = & $\xi^4 + \xi^2 + \xi$ \\
+            $\xi^{29}$ = & $\xi^3 + 1$ \\
+            $\xi^{30}$ = & $\xi^4 + \xi$ \\ \hline
+        \end{tabular}
+    \end{center}
+
+    Tenemos por tanto que $E = E(\xi^2 + 1, \xi^4 + \xi^3 + \xi + 1) = E(\xi^5, \xi^16)$ y  el punto $Q = (\xi^3 + \xi^2 + \xi, \xi + 1) = 
+    (\xi^9, \xi^18)$. Ahora procedemos a buscar una cota para $\|E\| \leq q + 1 + \lfloor 2 \sqrt{q} \rfloor = 32 + 1 + 11 = 44$ (donde $q = 32$).
+
+    \newpage
     \textbf{Ejercicio 2. }\textit{Para tu curva y tu punto base, genera un par de claves pública/privada para el protocolo ECDH.}
-
     \vspace{0.5cm}
 
+
+    \newpage
     \textbf{Ejercicio 3. }\textit{Cifra el mensaje $(\xi^3 + \xi^2 + 1, \xi^4 + \xi^2)$ mediante el criptosistema de Menezes-Vanstone.}
-
     \vspace{0.5cm}
 
+
+    \newpage
     \textbf{Ejercicio 4. }\textit{Descifra el mensaje anterior.}
 
 
