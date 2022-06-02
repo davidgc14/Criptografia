@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.2.26)  2 JUN 2022 22:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.2.26)  2 JUN 2022 22:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -519,22 +519,22 @@ LaTeX Font Info:    Trying to load font information for U+dsrom on input line 54
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] 
 AED: lastpage setting LastPage
-[5] (/home/curbelo/Documentos/Criptografia/Entregas/Entrega 4/Entrega04.aux) ) 
+[6] (/home/curbelo/Documentos/Criptografia/Entregas/Entrega 4/Entrega04.aux) ) 
 Here is how much of TeX's memory you used:
- 26200 strings out of 481239
- 641443 string characters out of 5920377
+ 26201 strings out of 481239
+ 641451 string characters out of 5920377
  1034980 words of memory out of 5000000
- 41012 multiletter control sequences out of 15000+600000
+ 41013 multiletter control sequences out of 15000+600000
  537112 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,8n,98p,785b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on "/home/curbelo/Documentos/Criptografia/Entregas/Entrega 4/Entrega04.pdf" (5 pages, 121588 bytes).
+Output written on "/home/curbelo/Documentos/Criptografia/Entregas/Entrega 4/Entrega04.pdf" (6 pages, 123507 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  7181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
