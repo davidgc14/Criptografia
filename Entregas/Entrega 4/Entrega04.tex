@@ -1,0 +1,63 @@
+\documentclass[fleqn]{article}
+
+%\pgfplotsset{compat=1.17}
+
+\usepackage{mathexam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{dsfont} %Numeros reales, naturales...
+\usepackage{cancel}
+\usepackage{babel}
+
+%\graphicspath{{images, }}
+\newcommand*{\QED}{\hfill\ensuremath{\square}}
+
+%Estructura de ecuaciones
+\setlength{\textwidth}{15cm} \setlength{\oddsidemargin}{5mm}
+\setlength{\textheight}{23cm} \setlength{\topmargin}{-1cm}
+
+
+
+\author{David García Curbelo}
+\title{Criptografía}
+
+\pagestyle{empty}
+
+
+\def\R{\mathds{R}}
+\def\Z{\mathds{Z}}
+\def\N{\mathds{N}}
+\def\Q{\mathds{Q}}
+\def\F{\mathds{F}}
+
+\def\sup{$^2$}
+
+\def\next{\quad \Rightarrow \quad}
+
+
+\begin{document}
+    \begin{center}
+        \LARGE{\textbf{Ejercicio 3}} \\
+        \Large{David García Curbelo} 
+    \end{center}
+
+    \vspace{1cm}     
+
+    \textit{Los parámetros de un criptosistema de ElGamal son $p = 211$ y 
+    $g = 3$, es decir, el criptosistema está diseñado en el cuerpo $\F_{211} = \Z_{211}$ y tomamos
+    como generador de $\F_{211}^*$, $g = 3$. La clave pública empleada es $3^a = 109 \pmod{211}$.
+    Descifra el criptograma $(154, \text{dni} \pmod{211})$, donde dni es el número de tu DNI. Para 
+    calcular los logaritmos discretos necesarios emplea dos de los métodos descritos en la teoría.} 
+
+    \vspace{0.5cm}   
+
+
+
+\end{document}
