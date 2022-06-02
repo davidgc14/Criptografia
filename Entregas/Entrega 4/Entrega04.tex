@@ -99,8 +99,32 @@
         \end{tabular}
     \end{center}
 
-    Tenemos por tanto que $E = E(\xi^2 + 1, \xi^4 + \xi^3 + \xi + 1) = E(\xi^5, \xi^16)$ y  el punto $Q = (\xi^3 + \xi^2 + \xi, \xi + 1) = 
-    (\xi^9, \xi^18)$. Ahora procedemos a buscar una cota para $\|E\| \leq q + 1 + \lfloor 2 \sqrt{q} \rfloor = 32 + 1 + 11 = 44$ (donde $q = 32$).
+    Tenemos por tanto que $E = E(\xi^2 + 1, \xi^4 + \xi^3 + \xi + 1) = E(\xi^5, \xi^{16})$ y  el punto $Q = (\xi^3 + \xi^2 + \xi, \xi + 1) = 
+    (\xi^9, \xi^{18})$. Ahora procedemos a buscar una cota para $|E| \leq q + 1 + \lfloor 2 \sqrt{q} \rfloor = 32 + 1 + 11 = 44$ (donde $q = 32$).
+    Obtenemos así que $f = \lceil 44 \rceil = 7$, por lo que obtenemos los siguientes puntos:
+    \begin{center}
+        \begin{tabular}{| c | c |}
+            \hline
+            0 & 0 \\
+            1 & $Q$ \\
+            2 & $2Q$ \\
+            3 & $3Q$ \\
+            4 & $4Q$ \\
+            5 & $5Q$ \\
+            6 & $6Q$ \\ \hline
+        \end{tabular}
+    \end{center}
+
+    Procedmemos a su cálculo explícito:
+
+    \begin{itemize}
+        \item[$2Q$] $ = Q + Q = (\xi^9, \xi^{18}) + (\xi^9, \xi^{18})$
+                    \begin{itemize}
+                        \item[$\lambda$] $ = x_1 + y_1 x_1^{-1} = \xi^9 + \xi^{18} \cdot \xi^{-9} = \xi^9 + \xi^9 = \xi^4 + \xi^3 + \xi + \xi^4 + \xi^3 + \xi = 0$
+                        \item[$x_3$] $ = \lambda^2 + \lambda + a + x_1 + x_2 = \xi^5 + \xi^9 + \xi^{18} = (\xi^2 + 1) + (\xi^4 + \xi^3 + \xi) + (\xi + 1) = \xi^4 + \xi^3 + \xi^2 = \xi^{13}$
+                        \item[$y_3$] $ = \lambda(x_1 + x_3 )+ x_3 + y_1 = $
+                    \end{itemize}
+    \end{itemize}
 
     \newpage
     \textbf{Ejercicio 2. }\textit{Para tu curva y tu punto base, genera un par de claves pública/privada para el protocolo ECDH.}
