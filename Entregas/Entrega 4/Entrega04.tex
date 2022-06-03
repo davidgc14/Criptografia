@@ -227,17 +227,25 @@
     \textbf{Ejercicio 2. }\textit{Para tu curva y tu punto base, genera un par de claves pública/privada para el protocolo ECDH.}
     \vspace{0.5cm}
 
-    Tomamos una clave privada que llamaremos $c$ a partir de la cual generaremos una clave pública dada por $(E, Q, cQ)$
+    Tomamos una clave privada que llamaremos $c$ a partir de la cual generaremos una clave pública dada por $(E, Q, cQ)$, siendo $E$ la curva
+    y $Q$ el punto base considerados en el ejercicio anterior. Tomamos como clave privada $c = 2$ para simplificar los cálculos (aunque dicho valor puede ser aleatorio), 
+    y obtenemos la clave pública 
+    $$(E, Q, cQ) = ((\xi^5, \xi^{16}), (\xi^9, \xi^{18}), 2Q) = ((\xi^5, \xi^{16}), (\xi^9, \xi^{18}), (\xi^{5}, \xi^{19}))$$
 
 
     \newpage
     \textbf{Ejercicio 3. }\textit{Cifra el mensaje $(\xi^3 + \xi^2 + 1, \xi^4 + \xi^2)$ mediante el criptosistema de Menezes-Vanstone.}
     \vspace{0.5cm}
 
+    Tomemos, además de la clave privada anterior $c$, un nuevo valor para $k$, el cual tomaremos como $k = 2$. Calculamos el punto $(x_0, y_0)$ que viene dado por 
+    $$ (x_0, y_0) = a \cdot k \cdot Q = 4Q = (\xi^{9}, \xi^{25})$$
+
+    Tomamos el mensaje $(m_1, m_2) = (\xi^3 + \xi^2 + 1, \xi^4 + \xi^2) = (\xi^{8}, \xi^{7})$ y procedemos al cifrado mediante el algoritmo de Menezes-Vanstone:
+    $$ E(m_1, m_2) = (kQ, x_0 m_1, y_0 m_2) = (2Q, \xi^{9} \xi^{8}, \xi^{25} \xi^{7}) = ((\xi^{5}, \xi^{19}), \xi^{17}, \xi)$$
 
     \newpage
     \textbf{Ejercicio 4. }\textit{Descifra el mensaje anterior.}
-
+    \vspace{0.5cm}
 
 
 \end{document}
