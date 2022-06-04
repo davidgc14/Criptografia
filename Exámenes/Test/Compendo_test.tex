@@ -59,6 +59,15 @@
         \item (V/F) Una c.e. sobre un cuerpo $K$ tiene siempre un punto proyectivo con coordenadas enteras.
         \item (V/F) Tres puntos alineados de una c.e. siempre suman cero.
         \item Si $E(\F_{p^k})$ es el grupo de una c.e. $\next$ Si es cíclico, no puede tener más de un elemento de orden dos.
+        \item Sea $\F_{2^{233}}$. ¿Por qué no es bueno emplear la ecuación $y^2 + (\xi^{221} + \xi^{120})y = x^3 + x + \xi^{3122}$? $\next$ Porque es supersingular.
+    \end{itemize}
+    \subsection{Menezes-Vanstone}
+    \begin{itemize}
+        \item Sobre $\F_{11}$ utilizamos la curva $y^2 = x^3 + 2x + 5$ y el punto $Q = (9,2)$, clave privada $a = 3$ y su clave pública $aQ = (8,4)$. ¿Cuál NO puede ser cifrado del mensaje $(5,5)$? $\next ((9,2), 9, 7)$
+        \item Sobre $\F_{41}$ utilizamos la curva $y^2 = x^3 + 33x + 35$ y el punto $Q = (8,27)$, clave privada $a = 21$ y su clave pública $aQ = (6,3)$. ¿Cuál SI puede ser cifrado del mensaje $(32,22)$? $\next ((19,10), 35, 33)$
+        \item Sobre $\F_{16}$ utilizamos la curva $y^2 + xy = x^3 + (\xi^3 + \xi + 1)x^2 + \xi^3 + \xi$ y el punto $Q = (\xi^3 + \xi^2 + \xi + 1,\xi^2 + 1)$, clave privada $a = 3$ y su clave pública $aQ = (\xi^3 + \xi^2 + \xi, \xi^3 + \xi^2)$. 
+                Obtenemos el criptograma $((\xi^3 + \xi^2 + \xi + 1, \xi^3 + \xi), \xi^3 + 1, \xi^3 + \xi + 1)$ ¿Cuál es el mensaje? $\next (\xi^3, \xi^3 + \xi^2)$
+        \item Sobre $\F_{17}$ utilizamos la curva $y^2 = x^3 + x + 1$ y el punto $Q = (0,1)$, clave privada de B es $a = 3$ y la clave pública de A es $aQ = (15,5)$. Clave compartida: $\next (10,5)$
     \end{itemize}
 
     \section{Primos de Fermat}
@@ -67,6 +76,8 @@
         \item (V/F) Los pseudoprimos fuertes pueden certificar que un número es compuesto pero no que es primo.
         \item (V/F) Aunque sea fácil comprobar la primalidad de un número de Fermat puede ser dificil demostrar la primalidad de alguno de sus factores.
         \item (V/F) Un pseudoprimo de Euler respecto de la base $a$ es siempre pseudoprimo de Fermat respecto de la misma base.
+        \item (V/F) Sólo se conocen un número ﬁnito de números de Carmichel.
+        \item (V/F) Los tests de Solovay-Strassen y el de Miller-Rabin pueden certificar que un número es compuesto.
     \end{itemize}
 
     \section{FCS}
@@ -84,6 +95,55 @@
         \item $\alpha = \frac{a + \sqrt{a^2 + 4}}{2} \next \alpha = [a,a,a,\dots]$
         \item $\alpha = \frac{1 + \sqrt{5}}{2} \next \alpha = [1,1,1,\dots]$
         \item (V/F) $\sqrt{a^2 - 1} = [a-1, \overline{1, 2(a-1), \dots}]$
+    \end{itemize}
+
+    \section{Diffie-Hellman}
+    \begin{itemize}
+        \item $p = 73$, $g = 5$. Claves públicas $A = (p, q, 37)$ y $B = (p, q, 12)$. Clave compartida $\quad \Rightarrow \quad$ 32.
+        \item $p = 37$, $g = 2$. Clave pública $A = (p, q, 3)$ y clave compartida 10. Clave privada B $\quad \Rightarrow \quad$ 30.
+    \end{itemize}
+
+    \section{ElGamal}
+    \begin{itemize}
+        \item Cuál de las siguientes parejas NO puede ser el cifrado de $m = 10$ con ElGamal y clave privada $a = 4$ con parámetros:
+                \begin{itemize}
+                    \item $p = 23, \thinspace g = 5 \next 14,7$
+                    \item $p = 17, \thinspace g = 3 \next 14,7$
+                \end{itemize}
+    \end{itemize}
+
+    \section{Logaritmo Discreto}
+    \begin{itemize}
+        \item ¿Cual de los algoritmos NO se puede emplear para el cálculo de log. dis. en $\F_{2^{1024}}$? $\next $ Cálculo de índice en cuerpos primos.
+        \item Aplicamos SIlver-Pohlig-Hellman para el cálculo de log. dis. de un elemento $b$ de orden $n = 700$. ¿Cuántas raíces de la unidad en $<b>$ hay que calcular? $\next 14$.
+    \end{itemize}
+
+    \section{Modos}
+    \begin{itemize}
+        \item ECB. El que menos bits cambia en el criptograma cuando alteramos un bit en el mensaje.
+        \item CBC. Ninguna de las otras opciones.
+        \item OFB. Convierte un cifrado de bloque en un cifrado de flujo síncrono.
+        \item CFB. Convierte un cifrado de bloque en un cifrado de flujo autosincronizable.
+    \end{itemize}
+
+    \section{Teoría}
+    \begin{enumerate}
+        \item No repudio: El emisario no puede negar haber realizado el envío.
+        \item Autenticidad: La información proviene de quien dice enviarla.
+        \item Confidencialidad: La información sólo puede ser accesible por las entidades autorizadas.
+        \item Cifrado de flujo síncrono. Es más vulnerable que un cifrado de flujo autosincronizable al cambio de un carácter en el criptograma.
+        \item Criptosistema de clave pública. No podemos $\next$ ninguna de las tres opciones.
+    \end{enumerate}
+
+    \section{Preguntas sueltas}
+    \begin{itemize}
+        \item[\textbf{BABY STEP}] Sea $G$ un grupo, $b \in G$ de orden 101. en BS-GS el número máximo de elementos de $G$ que necesitamos tener almacenados es $\next 13$.
+        \item[\textbf{PRATT}]  (V/F) El certificado de Pratt es recursivo y usa el concepto de orden multiplicativo módulo $n$.
+        \item[\textbf{MONTECARLO}] (V/F) El test probabilístico tipo Montecarlo corre en tiempo polinomial y puede ser inclinado a TRUE, a FALSE o no inclinado.
+        \item[\textbf{LUCAS-LEHMER}] (V/F) Existe un $n$ no primo con el grupo multiplicativo de las unidades módulo $n$ cíclico.
+        \item[\textbf{EC. CUADRÁTICA}] ¿Cuál en $\F_{32}$ tiene solución? $\next z^2 + (\xi^3 + \xi)z + (\xi^3 + \xi^2)$ 
+        \item[\textbf{RAÍCES CUADR.}] ¿Qué $\gamma$ puede usarse para calcular la raíz de 27 módulo 37? $\next \gamma = 18$. 
+        \item[\textbf{LAS VEGAS}] (V/F) Un test probabilístico tipo Las Vegas produce una respuesta correcta en tiempo aleatorio cuya media está acotada polinomialmente.
     \end{itemize}
 
 

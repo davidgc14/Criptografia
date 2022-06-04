@@ -263,9 +263,10 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/doublestroke/dsrom10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 OUTPUT /home/curbelo/Documentos/Criptografia/Exámenes/Test/Compendo_test.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /home/curbelo/Documentos/Criptografia/Exámenes/Test/Compendo_test.aux
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
