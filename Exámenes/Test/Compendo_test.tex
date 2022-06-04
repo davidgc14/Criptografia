@@ -1,0 +1,87 @@
+\documentclass[fleqn]{article}
+
+%\pgfplotsset{compat=1.17}
+
+\usepackage{mathexam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{dsfont} %Numeros reales, naturales...
+\usepackage{cancel}
+\usepackage{babel}
+
+%\graphicspath{{images, }}
+\newcommand*{\QED}{\hfill\ensuremath{\square}}
+
+%Estructura de ecuaciones
+\setlength{\textwidth}{15cm} \setlength{\oddsidemargin}{5mm}
+\setlength{\textheight}{23cm} \setlength{\topmargin}{-1cm}
+
+
+
+\author{David García Curbelo}
+\title{Criptografía}
+
+\pagestyle{empty}
+
+
+\def\R{\mathds{R}}
+\def\Z{\mathds{Z}}
+\def\N{\mathds{N}}
+\def\Q{\mathds{Q}}
+\def\F{\mathds{F}}
+
+\def\sup{$^2$}
+
+\def\next{\qquad \Rightarrow \qquad}
+
+
+\begin{document}
+
+    \section{RSA}
+    \begin{itemize}
+        \item $p = 11, \thinspace q = 7, \thinspace d = 53 \next (77, 17)$
+        \item $(119, 5), \thinspace E = 81 \next m = 30$
+        \item $(65, 7), \thinspace E = 31 \next m = 21$
+        \item $(299, 5) \next p = 13, \thinspace q = 23, \thinspace d = 53$
+        \item No se puede afirmar que calcular $d$ a partir de $(n, e)$ sea polinomial.
+    \end{itemize}
+
+    \section{Curvas Elípticas}
+    \begin{itemize}
+        \item Si tomamos una c.e. módulo $p$ dada en forma de Weierstrass $\next$ El número de puntos de la c.e. está comprendido en el intervalo $[(\sqrt{p} - 1)^2, (\sqrt{p} + 1)^2]$.
+        \item (V/F) Una c.e. sobre un cuerpo $K$ tiene siempre un punto proyectivo con coordenadas enteras.
+        \item (V/F) Tres puntos alineados de una c.e. siempre suman cero.
+        \item Si $E(\F_{p^k})$ es el grupo de una c.e. $\next$ Si es cíclico, no puede tener más de un elemento de orden dos.
+    \end{itemize}
+
+    \section{Primos de Fermat}
+    \begin{itemize}
+        \item (V/F) Un pseudoprimo de Fermat, $n = psp(a)$, satisface $a^{n-1} \equiv 1 \pmod{n}$ y es compuesto.
+        \item (V/F) Los pseudoprimos fuertes pueden certificar que un número es compuesto pero no que es primo.
+        \item (V/F) Aunque sea fácil comprobar la primalidad de un número de Fermat puede ser dificil demostrar la primalidad de alguno de sus factores.
+        \item (V/F) Un pseudoprimo de Euler respecto de la base $a$ es siempre pseudoprimo de Fermat respecto de la misma base.
+    \end{itemize}
+
+    \section{FCS}
+    \begin{itemize}
+        \item La FCS de $\sqrt{d}$ con $d$ libre de cuadrados es $[q_0, \dots, 2q_0]$ donde cada $q_i < q_0$.
+        \item Si $\alpha = \frac{P + \sqrt{d}}{Q}$ es un irracional cuadrático ($d$ libre de cuadrados): 
+                \begin{itemize}
+                    \item La FCS de $\alpha$ es periódica con periodo máximo $2d - 1$.
+                    \item La FCS de $\alpha$ es puramente periódica sii $\alpha > 1$ y $1 < \overline{\alpha} < 0$ (su conjugado).
+                \end{itemize}
+        \item (V/F) Una FCS finita coincide con su último convergente.
+        \item Si $x^2 - dy^2 = N$ ($|N| < \sqrt{d}$) es una ecuación de Pell $\next$ Cualquier solución positiva con $mcd(x,y) = 1$, son el numerador y el denominador de una convergente de la FCS de $\sqrt{d}$.
+    \end{itemize}
+
+
+
+
+\end{document}
