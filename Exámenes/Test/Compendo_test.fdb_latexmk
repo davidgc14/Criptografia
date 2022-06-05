@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1654434287 "/home/curbelo/Documentos/Criptografia/Exámenes/Test/Compendo_test.tex" "/home/curbelo/Documentos/Criptografia/Exámenes/Test/Compendo_test.pdf" "Compendo_test" 1654434287
+["pdflatex"] 1654434405 "/home/curbelo/Documentos/Criptografia/Exámenes/Test/Compendo_test.tex" "/home/curbelo/Documentos/Criptografia/Exámenes/Test/Compendo_test.pdf" "Compendo_test" 1654434406
   "/etc/texmf/web2c/texmf.cnf" 1645912500 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/curbelo/Documentos/Criptografia/Exámenes/Test/Compendo_test.aux" 1654434287 1314 5085665cd8be14ce44ce9019562de7f1 ""
-  "/home/curbelo/Documentos/Criptografia/Exámenes/Test/Compendo_test.tex" 1654434286 8517 bcf2c025f7c8a178f2df37a59bb3a39b ""
+  "/home/curbelo/Documentos/Criptografia/Exámenes/Test/Compendo_test.aux" 1654434406 1314 9b71ec88f3defaf3bacc8a4468084967 ""
+  "/home/curbelo/Documentos/Criptografia/Exámenes/Test/Compendo_test.tex" 1654434405 8642 3906a9e0f46900000533fd9f12b827e9 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -16,6 +16,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm" 1136768653 1300 63a6111ee6274895728663cf4b4e7e81 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/doublestroke/dsrom10.tfm" 1136768653 452 168d896d9b2ead965bf08c9db69c947f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm" 1136768653 452 dc44cdd7c88ff2b15557f125edfc277b ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
@@ -24,6 +25,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
@@ -189,11 +191,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1645912741 4770781 1ed1abab22da9c3e2cc82e4db562318b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1645912789 8259919 a793c1f5b9ddcd613a0c518ee5a02865 ""
-  "Compendo_test.aux" 1654434287 1314 5085665cd8be14ce44ce9019562de7f1 "pdflatex"
-  "Compendo_test.tex" 1654434286 8517 bcf2c025f7c8a178f2df37a59bb3a39b ""
+  "Compendo_test.aux" 1654434406 1314 9b71ec88f3defaf3bacc8a4468084967 "pdflatex"
+  "Compendo_test.tex" 1654434405 8642 3906a9e0f46900000533fd9f12b827e9 ""
   (generated)
   "Compendo_test.aux"
+  "Compendo_test.log"
   "/home/curbelo/Documentos/Criptografia/Exámenes/Test/Compendo_test.pdf"
   "Compendo_test.pdf"
-  "Compendo_test.log"
   "/home/curbelo/Documentos/Criptografia/Exámenes/Test/Compendo_test.log"
