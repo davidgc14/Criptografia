@@ -118,16 +118,16 @@
     Procedmemos a su cálculo explícito:
 
     \begin{itemize}
-        \item[$2Q$] $ = Q + Q = (\xi^9, \xi^{18}) + (\xi^9, \xi^{18})$
+        \item[$2Q$] $ = Q + Q = (\xi^{12}, \xi^{18}) + (\xi^{12}, \xi^{18})$
                     \begin{itemize}
-                        \item[$\lambda$] $ = x_1 + y_1 x_1^{-1} = \xi^9 + \xi^{18} \xi^{-9} = \xi^9 + \xi^9 = 0$
-                        \item[$x_3$] $ = \lambda^2 + \lambda + a + x_1 + x_2 = \xi^5 + \xi^9 + \xi^{9} = \xi^{5}$
-                        \item[$y_3$] $ = \lambda(x_1 + x_3) + x_3 + y_1 = \xi^{5} + \xi^{18} = (\xi^2 + 1) + (\xi + 1) = \xi^2 + \xi = \xi^{19}$
+                        \item[$\lambda$] $ = x_1 + y_1 x_1^{-1} = \xi^{12} + \xi^{18} \xi^{-12} = \xi^{12} + \xi^6 = \xi^{2}$
+                        \item[$x_3$] $ = \lambda^2 + \lambda + a + x_1 + x_2 = \xi^4 + \xi^2 + \xi^{5} = \xi^{7} + \xi^{5} = \xi^{10}$
+                        \item[$y_3$] $ = \lambda(x_1 + x_3) + x_3 + y_1 = \xi^{2} (\xi^{12} + \xi^{10}) + \xi^{10} + \xi^{18} = \xi^{17} + \xi^{30} = 1$
                     \end{itemize}
-                    $2Q = (\xi^{5}, \xi^{19})$
+                    $2Q = (\xi^{10}, 1)$
         %%
         %%
-        \item[$3Q$] $ = 2Q + Q = (\xi^{5}, \xi^{19}) + (\xi^9, \xi^{18})$
+        \item[$3Q$] $ = 2Q + Q = (\xi^{5}, \xi^{19}) + (\xi^{12}, \xi^{18})$
                     \begin{itemize}
                         \item[$\lambda$] $ = (y_2 + y_1)(x_2 + x_1)^{-1} = (\xi^{18} + \xi^{19})(\xi^{5} + \xi^{9})^{-1} = (\xi^4 + \xi^3 + \xi^2 + \xi + 1)(\xi^2 + 1)^{-1} = \xi^{5} (\xi^{15})^{-1} = \xi^{-10} = \xi^{21}$
                         \item[$x_3$] $ = \lambda^2 + \lambda + a + x_1 + x_2 = \xi^{11} + \xi^{21} + \xi^{5} + \xi^{5} + \xi^{9} = \xi^{15} + \xi^9 = \xi^5$
@@ -136,7 +136,7 @@
                     $3Q = (\xi^{2}, \xi^{18})$
         %%
         %%
-        \item[$4Q$] $ = 3Q + Q = (\xi^{5}, \xi^{18}) + (\xi^9, \xi^{18})$
+        \item[$4Q$] $ = 3Q + Q = (\xi^{5}, \xi^{18}) + (\xi^{12}, \xi^{18})$
             \begin{itemize}
                 \item[$\lambda$] $ = (y_2 + y_1)(x_2 + x_1)^{-1} = (\xi^{18} + \xi^{18})(\xi^{5} + \xi^{9})^{-1} = 0$
                 \item[$x_3$] $ = \lambda^2 + \lambda + a + x_1 + x_2 = \xi^{5} + \xi^{5} + \xi^{9} = \xi^{9}$
@@ -145,7 +145,7 @@
             $4Q = (\xi^{9}, \xi^{25})$
         %%
         %%
-        \item[$5Q$] $ = 4Q + Q = (\xi^{9}, \xi^{25}) + (\xi^9, \xi^{18})$
+        \item[$5Q$] $ = 4Q + Q = (\xi^{9}, \xi^{25}) + (\xi^{12}, \xi^{18})$
             \begin{itemize}
                 \item[$\lambda$] $ = (y_2 + y_1)(x_2 + x_1)^{-1} = (\xi^{25} + \xi^{18})(\xi^{9} + \xi^{9})^{-1}  = 0$
                 \item[$x_3$] $ = \lambda^2 + \lambda + a + x_1 + x_2 = \xi^{5} + \xi^{9} + \xi^{9} = \xi^{5}$
@@ -154,7 +154,7 @@
             $5Q = (\xi^{5}, \xi^{15})$
         %%
         %%
-        \item[$6Q$] $ = 5Q + Q = (\xi^{5}, \xi^{15}) + (\xi^9, \xi^{18})$
+        \item[$6Q$] $ = 5Q + Q = (\xi^{5}, \xi^{15}) + (\xi^{12}, \xi^{18})$
             \begin{itemize}
                 \item[$\lambda$] $ = (y_2 + y_1)(x_2 + x_1)^{-1} = (\xi^{15} + \xi^{18})(\xi^{5} + \xi^{9})^{-1} = (\xi^{13})(\xi^{15})^{-1} = \xi^{-2} = \xi^{29}$
                 \item[$x_3$] $ = \lambda^2 + \lambda + a + x_1 + x_2 = \xi^{27} + \xi^{29} + \xi^{5} + \xi^{5} + \xi^{9} = \xi + \xi^{9} = \xi^{21}$
@@ -168,7 +168,7 @@
         \begin{tabular}{| c | c | c |}
             \hline
             0 & 0 & $(0,0)$\\
-            1 & $Q$ & $(\xi^9, \xi^{18})$\\
+            1 & $Q$ & $(\xi^{12}, \xi^{18})$\\
             2 & $2Q$ & $(\xi^{5}, \xi^{19})$\\
             3 & $3Q$ & $(\xi^{2}, \xi^{18})$\\
             4 & $4Q$ & $(\xi^{9}, \xi^{25})$\\
@@ -180,7 +180,7 @@
     Procedemos a continuación al cálculo de $-7Q$:
 
     \begin{itemize}
-        \item[$7Q$] $ = 6Q + Q = (\xi^{21}, \xi^{29}) + (\xi^9, \xi^{18})$
+        \item[$7Q$] $ = 6Q + Q = (\xi^{21}, \xi^{29}) + (\xi^{12}, \xi^{18})$
             \begin{itemize}
                 \item[$\lambda$] $ = (y_2 + y_1)(x_2 + x_1)^{-1} = (\xi^{29} + \xi^{18})(\xi^{21} + \xi^{9})^{-1} = (\xi^{6})(\xi)^{-1} = \xi^{5}$
                 \item[$x_3$] $ = \lambda^2 + \lambda + a + x_1 + x_2 = \xi^{10} + \xi^{5} + \xi^{5} + \xi^{21} + \xi^{9} = \xi^{29} + \xi^{9} = \xi^{17}$
@@ -232,7 +232,7 @@
     Tomamos una clave privada que llamaremos $c$ a partir de la cual generaremos una clave pública dada por $(E, Q, cQ)$, siendo $E$ la curva
     y $Q$ el punto base considerados en el ejercicio anterior. Tomamos como clave privada $c = 2$ para simplificar los cálculos (aunque dicho valor puede ser aleatorio), 
     y obtenemos la clave pública 
-    $$(E, Q, cQ) = ((\xi^5, \xi^{16}), (\xi^9, \xi^{18}), 2Q) = ((\xi^5, \xi^{16}), (\xi^9, \xi^{18}), (\xi^{5}, \xi^{19}))$$
+    $$(E, Q, cQ) = ((\xi^5, \xi^{16}), (\xi^{12}, \xi^{18}), 2Q) = ((\xi^5, \xi^{16}), (\xi^{12}, \xi^{18}), (\xi^{5}, \xi^{19}))$$
 
 
     % \newpage
